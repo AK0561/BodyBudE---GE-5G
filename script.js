@@ -68,8 +68,6 @@ var prevBodyTemperature = '';
 
 function fetchThingSpeakData() {
     // ThingSpeak Channel ID and Read API Key
-    var channelID = '2035633';
-    var apiKey = 'THSEGM9R4XVAY231';
 
     // ThingSpeak API URL
     var url = 'https://api.thingspeak.com/channels/' + channelID + '/feeds.json?api_key=' + apiKey + '&results=1';
