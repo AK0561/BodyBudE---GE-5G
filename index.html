@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BodyBudE Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="myaccount.html">My Account</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle-container">
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle" class="theme-toggle-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                    <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+                  </svg>
+            </label>
+        </div>
+    </header>
+    <div class="details-container">
+        <div class="details-row">
+            <p><strong>Name :</strong> Shrey</p>
+            <p><strong>Gender :</strong> Male</p>
+        </div>
+        <div class="details-row">
+            <p><strong>Age :</strong> 45</p>
+            <p><strong>Contact :</strong> 8965456302</p>
+        </div>
+    </div>
+    <div class="status-boxes">
+        <div class="status-box">
+            <!-- Heart Rate SVG -->
+            <svg width="24" height="24" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- SVG path data for Heart Rate -->
+                <path d="M26.0001,5.9995 L28.1011,4.1005 C33.5671,-1.3665 42.4331,-1.3665 47.8991,4.1005 C53.3671,9.5685 53.3661,18.4325 47.8991,23.8985 L26.0001,45.9995 L4.1011,23.8985 C-1.3659,18.4325 -1.3669,9.5685 4.1011,4.1005 C9.5671,-1.3665 18.4331,-1.3665 23.8991,4.1005 L26.0001,5.9995 Z" id="Fill-249" fill="#F16963"></path>
+                <path d="M26.0001,5.9995 L28.1011,4.1005 C33.5671,-1.3665 42.4331,-1.3665 47.8991,4.1005 C53.3671,9.5685 53.3661,18.4325 47.8991,23.8985 L26.0001,45.9995 L4.1011,23.8985 C-1.3659,18.4325 -1.3669,9.5685 4.1011,4.1005 C9.5671,-1.3665 18.4331,-1.3665 23.8991,4.1005 L26.0001,5.9995 Z" id="Stroke-250" stroke="#BE3A37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#F16963"></path>
+                <polyline id="Stroke-251" stroke="#BE3A37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="16.0001 23.9995 23.0001 23.9995 26.0001 11.9995 31.0001 33.9995 35.0001 19.9995 37.0001 23.9995 52.0001 23.9995" fill="#F16963"></polyline>
+                <!-- Add other SVG elements as needed -->
+            </svg>
+            <h2>Heart Rate</h2>
+            <p id="heart-rate-value">Loading...</p>
+            <p>Normal</p>
+        </div>
+
+        <div class="status-box">
+            <!-- Blood Oxygen SVG -->
+            <svg width="24" height="24" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <!-- SVG path data for Blood Oxygen -->
+                <path d="M512 511.9m-379.4 0a379.4 379.4 0 1 0 758.8 0 379.4 379.4 0 1 0-758.8 0Z" fill="#00B36A" /><path d="M512 891.4c100 0 190.9-38.8 258.6-102C434.2 838 251 713.2 140.8 433.5c-5.4 25.3-8.2 51.6-8.2 78.5 0 209.5 169.9 379.4 379.4 379.4z" fill="#009957" /><path d="M512 925.5C283.9 925.5 98.5 740 98.5 512 98.5 283.9 284 98.5 512 98.5S925.5 284 925.5 512c0 18.6-1.2 37.3-3.7 55.6-2.5 18.7-19.8 31.8-38.4 29.3-18.7-2.5-31.8-19.7-29.3-38.4 2-15.3 3.1-30.9 3.1-46.4 0-190.3-154.9-345.2-345.2-345.2S166.9 321.7 166.9 512s154.9 345.2 345.2 345.2c40.2 0 79.5-6.8 116.9-20.3 17.7-6.4 37.3 2.9 43.7 20.6 6.4 17.7-2.9 37.3-20.6 43.7-44.9 16.1-92 24.3-140.1 24.3z" fill="#1A1A1A" /><path d="M755 812.3h77.3c7.7 0 13.6 2 17.6 6 4.1 4.1 6.1 9.5 6.1 16.3 0 6.2-1.6 11.4-4.8 15.6s-8 6.4-14.6 6.4H727.7c-7.4 0-13.2-2.6-17.4-7.8-4.2-5.2-6.2-11.4-6.2-18.4 0-4.5 1.3-10.5 4-18s5.5-13.3 8.8-17.6c13.1-17.4 24.9-32.1 35.5-44.5 10.5-12.4 18.1-20.5 22.6-24.4 8.1-7.3 14.9-14.6 20.2-21.9s9.5-14.9 12.3-22.6c2.8-7.8 4.2-15.2 4.2-22.7 0-8-1.5-15.2-4.5-21.5-3-6.4-7.1-11.3-12.3-14.8-5.2-3.5-10.8-5.3-17-5.3-12.9 0-23.1 7.2-30.5 21.6-1 1.8-2.7 7-5 15.4s-4.9 14.9-7.8 19.4c-3 4.5-7.2 6.7-12.8 6.7-4.9 0-9-2-12.3-6.2-3.2-4.2-4.9-9.8-4.9-16.9 0-8.7 1.6-17.7 4.6-27 3-9.4 7.7-17.9 13.7-25.6 6.1-7.7 13.8-13.8 23.1-18.6 9.3-4.7 20.2-7 32.8-7 15.1 0 28 3 38.7 9 6.9 4.1 13 9.5 18.2 16.5 5.3 7 9.3 15.1 12.2 24.4 3 9.2 4.3 18.7 4.3 28.7 0 15.6-3 29.7-9.1 42.5-6.1 12.7-12.3 22.7-18.6 29.9s-16.9 18.6-31.8 34c-14.9 15.4-25 27.4-30.6 35.9-2.2 3.7-4.7 7.7-7.1 12.5z" fill="#1A1A1A" />
+                <!-- Add other SVG elements as needed -->
+            </svg>
+            <h2>Blood Oxygen</h2>
+            <p id="blood-oxygen-value">Loading...</p>
+            <p>Normal</p>
+        </div>
+
+        <div class="status-box">
+            <!-- Body Temperature SVG -->
+            <svg height="24" width="24" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <!-- SVG path data for Body Temperature -->
+                <path style="fill:#E8F4FC;" d="M195.048,338.355V60.952C195.048,27.29,222.337,0,256,0s60.952,27.29,60.952,60.952v277.419
+                c22.287,17.874,36.571,45.314,36.571,76.105C353.524,468.339,309.862,512,256,512c-53.86,0-97.524-43.661-97.524-97.524
+                C158.476,383.681,172.757,356.229,195.048,338.355z"/>
+                <path style="fill:#D1E5F5;" d="M316.952,60.952v277.419c22.287,17.874,36.571,45.314,36.571,76.105
+	            C353.524,468.339,309.862,512,256,512V0C289.663,0,316.952,27.29,316.952,60.952z"/>
+                <path style="fill:#E59278;" d="M237.714,382.809V60.952h36.571v321.857c10.929,6.326,18.286,18.133,18.286,31.667
+	            c0,20.197-16.374,36.571-36.571,36.571s-36.571-16.374-36.571-36.571C219.429,400.942,226.786,389.135,237.714,382.809z"/>
+                <!-- Add other SVG elements as needed -->
+            </svg>
+            <h2>Body Temperature</h2>
+            <p id="body-temperature-value">Loading...</p>
+            <p>Normal</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="content-container">
+            <div class="parameters">
+                <div class="parameter" id="oxygen">
+                    <h2>Blood Oxygen</h2>
+                    <canvas id="bloodOxygenChart" width="400" height="200"></canvas>
+                </div>
+                <div class="parameter" id="Heart-Rate">
+                    <h2>Heart Rate</h2>
+                    <canvas id="heartRateChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+            <div class="parameters">
+                <div class="parameter" id="temperature">
+                    <h2>Body Temperature</h2>
+                    <canvas id="bodyTemperatureChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; BodyBudE 2024</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script src="script.js"></script>
+</body>
+</html>

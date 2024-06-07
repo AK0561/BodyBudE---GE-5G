@@ -1,0 +1,155 @@
+.theme-toggle-container {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#theme-toggle {
+    display: none;
+}
+
+.theme-toggle-label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-toggle-label svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: fill 0.3s;
+    color: #000;
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #fff;
+    }
+
+    header {
+        background-color: #151515ce;
+    }
+
+    nav a {
+        color: #fff;
+    }
+
+    .details-container, .status-boxes, .content-container, footer {
+        background-color: #1e1e1e;
+    }
+
+    .parameter, .status-box {
+        background-color: #2e2e2e;
+        border: 1px solid #555;
+    }
+
+    footer {
+        background-color: #1e1e1e;
+    }
+
+    .status-box h2, .status-box p {
+        color: #fff;
+    }
+}
+
+/* Custom Dark Mode Class */
+.dark-mode {
+    background-color: #000000;
+    color: #fff;
+}
+
+.dark-mode header {
+    background-color: #323030e3;
+}
+
+.dark-mode nav a {
+    color: #fff;
+}
+
+.dark-mode .details-container, .dark-mode .status-boxes, .dark-mode .content-container, .dark-mode footer {
+    background-color: transparent;
+}
+
+.dark-mode .parameter, .dark-mode .status-box {
+    background-color: #2e2e2e;
+    border: 1px solid #555;
+}
+
+.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .status-box h2, .dark-mode .status-box p {
+    color: #fff;
+}
+
+.dark-mode .theme-toggle-label svg {
+    fill: #fff;
+}
+
+.dark-mode h5 {
+    color: #1e1e1e;
+}
+
+.dark-mode .h1tag{
+    color: #1e1e1e;
+}
+
+.dark-mode .logo {
+    filter: brightness(100);
+}
+
+
+.dark-mode h4 {
+    color: #1e1e1e;
+}
+
+.dark-mode .get {
+   color: #000000b7;
+}
+
+.dark-mode .p1{
+    color: #000000;
+}
+
+.dark-mode .content-container-1 {
+    background-color: #ffffff;
+    border: 1px solid #555;
+}
+
+.dark-mode .content-container-2{
+    background-color: #ffffff;
+    border: 1px solid #555;
+}
+
+.dark-mode .support {
+    background-color: #000;
+}
+
+.dark-mode .contact-method {
+    background-color: #fff;
+}
+.dark-mode .sub {
+    color: #000000b7;
+ }
+
+ .dark-mode .sub1 {
+    color: #4f4949eb;
+    text-decoration: underline;
+ }
+
+.dark-mode .name1 {
+    color :#000000b7
+}
+
+.dark-mode .overview {
+    color :#000000b7
+}
