@@ -153,3 +153,10 @@
 .dark-mode .overview {
     color :#000000b7
 }
+
+.dark-mode #logout-btn {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+    border-width: 1px;
+}
