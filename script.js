@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+        window.location.href = 'login.html'; 
+    }
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleLabel = document.querySelector('.theme-toggle-label svg');
 
@@ -31,6 +35,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
             themeToggleLabel.style.fill = '#fff';
         }
     }
+        const backButton = document.getElementById('logout-btn');
+        backButton.addEventListener('click', () => {
+            console.log('Logout button clicked');
+            localStorage.removeItem('token');
+            window.location.href = 'login.html';       
+    });    
 });
 
 var latestData = {
@@ -68,6 +78,8 @@ var prevBodyTemperature = '';
 
 function fetchThingSpeakData() {
     // ThingSpeak Channel ID and Read API Key
+    var channelID = '2035633';
+    var apiKey = 'THSEGM9R4XVAY231';
 
     // ThingSpeak API URL
     var url = 'https://api.thingspeak.com/channels/' + channelID + '/feeds.json?api_key=' + apiKey + '&results=1';
