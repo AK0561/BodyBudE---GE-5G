@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - BodyBudE Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="/images/pulse.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/css/login-style2.css">
+</head>
+<body>
+    <img src="/images/logo.png" alt="Logo" class="logo">
+    <div class="image-container">
+        <img src="/images/Group.png" alt="Background Image">
+    </div>
+    <div class="login-container">
+        <div class="signup-form">
+            <h1>Create an Account</h1>
+            <form id="signupForm">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" required>
+                <label for="gender">Gender</label>
+                <input type="text" id="gender" name="gender" required>
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+                <label for="experience">Experience</label>
+                <input type="text" id="experience" name="experience" required>
+                <label for="typeOf">Type Of</label>
+                <input type="text" id="typeOf" name="typeOf" required>
+                <label for="otherTreatmentAreas">Other Treatment Areas (comma separated)</label>
+                <input type="text" id="otherTreatmentAreas" name="otherTreatmentAreas" required>
+                <input type="hidden" id="officePhone" name="officePhone" value="0124-3252852">
+                <input type="hidden" id="address" name="address" value="43 Park Avenue, Chennai, Tamil Nadu, 603203">
+                <input type="hidden" id="languages" name="languages" value="English, Hindi">
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account ? <a href="/html/login.html">Sign In</a></p>
+        </div>
+    </div>
+    <script src="/js/signup-script.js"></script>
+</body>
+</html>

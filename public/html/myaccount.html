@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - BodyBudE</title>
+    <link rel="icon" type="image/x-icon" href="/images/pulse.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style1.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dark.css">
+</head>
+<body>
+    <header>
+        <img src="/images/logo.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <div class = "navbar">
+                    <li><a href="/html/index.html" class="nav-link" id="home">Home</a></li>
+                    <li><a href="/html/myaccount.html" class="nav-link"  id="my-account">My Account</a></li>
+                    <li><a href="/html/support.html" class="nav-link"  id="support">Support</a></li>
+                </div>
+            </ul>
+        </nav>
+        <div class="theme-toggle-container">
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle" class="theme-toggle-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                    <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+                </svg>
+            </label>
+        </div>
+        <button id="logout-btn">Logout</button> 
+    </header>
+    <main>
+        <h1 class="doctor-name" id="doctor-name">Loading...</h1>
+
+    <main class="container">
+        <div class="profile-section">
+            <img src="/images/profile-pic.png" id="doctor-profile-pic" alt="Profile Picture" class="profile-pic">
+        </div>
+
+        <div class="bio-section">
+            <h2>Biography</h2>
+            <p id="bio">
+            </p>
+            <div class="expertise-awards-container">
+                <!-- Areas of Expertise -->
+                <div class="expertise">
+                    <h2>Areas of Expertise</h2>
+                    <ul>
+                        <li>Cardiology</li>
+                        <li>General Medicine</li>
+                        <li>Diabetes Management</li>
+                        <li>Infectious Diseases</li>
+                    </ul>
+                </div>
+        
+                <!-- Awards -->
+                <div class="awards">
+                    <h2>Awards</h2>
+                    <ul>
+                        <li>Best Cardiologist Award, 2023</li>
+                        <li>Excellence in Patient Care, 2021</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contact-hours-container">
+                <div class="contact-info">
+                    <h2>Contact Me</h2>
+                    <p><b>Phone:</b> <span id="phone">+91-9891656822</span></p>
+                    <p><b>Email:</b> <span id="email">arnavaggarwal@medmix.com</span></p>
+                    <p><b>Speciality:</b> <span id="speciality">Cardiology</span></p>
+                    <p><b>Degrees:</b> <span id="degrees">MBBS, DNB</span></p>
+                    <p><b>University:</b> <span id="university">AIIMS, Delhi</span></p>
+                </div>
+                <div class="working-hours">
+                    <h2>Working Hours</h2>
+                    <p><b>Mon-Thu:</b> 9:30 AM - 9:00 PM</p>
+                    <p><b>Friday:</b> 6:00 AM - 9:00 PM</p>
+                    <p><b>Saturday:</b> 10:00 AM - 3:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; BodyBudE 2025</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            fetch('http://localhost:3000/api/account', {
+    headers: { 'Authorization': `Bearer ${token}` }
+})
+.then(response => response.json())
+.then(user => {
+    console.log("API Response:", user); // Debugging: Check received data
+
+    document.getElementById('doctor-name').textContent = `${user.name}` || "Not Available";
+    document.getElementById('phone').textContent = user.phone || "Not Available";
+    document.getElementById('email').textContent = user.email || "Not Available";
+
+    // 🛠 Fix field names to match API response
+    document.getElementById('speciality').textContent = user.speciality || "Not Available"; // ✅ Fix field name
+    document.getElementById('degrees').textContent = user.degrees || "Not Available"; // ✅ Fix field name
+    document.getElementById('bio').textContent = user.bio || "Not Available"; // ✅ Fix bio usage
+
+
+    // 🛠 Generate bio dynamically since it's missing from API
+    document.getElementById('bio').textContent = `Dr. ${userDetails.name} is a highly experienced ${userDetails.typeOf} with over ${userDetails.experience} of dedicated medical practice. 
+          Specializing in ${userDetails.typeOf}, he has helped countless patients manage and recover from complex health conditions. 
+          With expertise in ${userDetails.otherTreatmentAreas.join(", ")}, he provides comprehensive care tailored to each patient’s needs. 
+          Passionate about patient well-being, Dr. ${userDetails.name} stays updated with the latest advancements in medical science to deliver 
+          cutting-edge treatments. He is fluent in ${userDetails.languages.join(" and ")}, ensuring clear communication with his diverse patient base.` || "Not Available";
+})
+.catch(error => console.error('Error fetching account details:', error));
+});
+    </script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
