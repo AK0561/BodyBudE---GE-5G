@@ -1,0 +1,249 @@
+/* General Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark gray background */
+    color: #d0d0d0; /* Light gray text */
+}
+
+/* Chat Container Styling */
+.dark-mode .chat-container {
+    background-color: #1e1e2e; /* Subtle dark blue */
+    border: 1px solid #2a2a3a; /* Slightly lighter border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Soft shadow */
+}
+
+/* Chat Header Styling */
+.dark-mode .chat-header {
+    background-color: #32324a; /* Dark blue-gray header */
+    color: #ffffff; /* White text */
+}
+
+/* Online Doctors Panel */
+.dark-mode .online-doctors {
+    background-color: #242436; /* Dark sidebar */
+    border-right: 1px solid #3a3a4a; /* Sidebar border */
+}
+
+.dark-mode .doctor {
+    background-color: #32324a; /* Doctor card background */
+    color: #ffffff; /* White text */
+}
+
+.dark-mode .doctor:hover {
+    background-color: #3a3a5a; /* Slightly lighter hover effect */
+}
+
+/* Chat Messages Styling */
+.dark-mode .chat-messages {
+    background-color: #121212; /* Dark gray chat area */
+}
+
+.dark-mode .message.sent {
+    background-color: #3a3a5a; /* Muted blue for sent messages */
+    color: #ffffff; /* White text */
+}
+
+.dark-mode .message.received {
+    background-color: #242436; /* Darker gray for received messages */
+    color: #d0d0d0; /* Light gray text */
+}
+
+.dark-mode .message-sender {
+    font-weight: bold;
+    color: #ffffff; /* White sender name */
+}
+
+.dark-mode .message-time {
+    font-size: 10px;
+    color: #888888; /* Dimmed gray timestamp */
+}
+
+/* Chat Input Area Styling */
+.dark-mode .chat-input-area {
+    background-color: #242436; /* Input area background */
+}
+
+.dark-mode input#message-input {
+    background-color: #32324a;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+.dark-mode button#send-button {
+    background-color: #3a3a5a;
+    color: white;
+    border-radius: 20px;
+}
+
+.dark-mode button#send-button:hover {
+    background-color: #4a4a6a;
+}
+
+/* Attachment Icon Styling in Dark Mode */
+.dark-mode .attachment-wrapper svg {
+    fill: #ffffff;
+}
+
+/* Minimize and Close Button Styling in Dark Mode */
+.dark-mode .chat-controls button {
+    color: white;
+}
+
+/* Floating Chat Button in Dark Mode */
+.dark-mode .chat-button {
+    background-color: #6d6f72;
+}
+
+/* Status Box Styling in Dark Mode */
+.dark-mode .status-box {
+    background-color: #2e2e2e;
+    border: 1px solid #555;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .status-box h2,
+.dark-mode .status-box p {
+    color: white;
+}
+
+/* Status Box Labels in Dark Mode (e.g., Normal, High) */
+.dark-mode .status-box .status-label {
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 20px; /* Rounded edges for label */
+    background-color: #7d7e80; /* Muted gray for labels in dark mode */
+    color: white; /* White text for labels */
+}
+
+/* Header Styling in Dark Mode */
+.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+/* Footer Styling in Dark Mode */
+.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+/* Details Container in Dark Mode (Optional) */
+.dark-mode .details-container,
+.dark-mode .status-boxes,
+.dark-mode .content-container,
+.dark-mode footer {
+    background-color: transparent;
+}
+
+/* Content Containers (Optional) */
+.dark-mode .content-container-1,
+.dark-mode .content-container-2 {
+    background-color: transparent;
+}
+
+/* Logout Button in Dark Mode */
+.dark-mode #logout-btn {
+    background-color: rgb(86, 0, 0);
+    color: rgb(255, 253, 253);
+}
+
+.dark-mode .file-label{
+    color: black;
+}
+
+.dark-mode .contact-card {
+    background-color: #2e2e2e;
+    border: 1px solid #555;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.dark-mode .contact-details p {
+    color: white;
+}
+
+.dark-mode .feedback-form-container {
+    background-color: #2e2e2e;
+    border: 1px solid #555;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .logo-one{
+    border-color: white;
+}
+
+.dark-mode .ask-us-card {
+    background-color: #2e2e2e;
+    border: 1px solid #555;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .faq-item {
+    background-color: #b6b6b660;
+    border: 1px solid #555;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .faq-question{
+    color: rgb(0, 0, 0);
+}
+.dark-mode .faq-answer{
+    color: white;
+}
+
+.dark-mode .faq-icon {
+    color :#121212;
+}
+
+.dark-mode .faq-item.open .faq-icon {
+    color: #121212; /* Blue icon color for closed state */
+
+}
+.dark-mode .nav-link {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    color: rgb(174, 174, 174);
+    text-decoration: none; /* Remove default underline */
+    padding-bottom: 5px; /* Space for underline */
+    border-bottom: 3px solid transparent; /* Invisible border initially */
+    transition: all 0.3s ease; /* Smooth transition for effects */
+}
+
+.dark-mode .nav-link:hover {
+    border-bottom: 2px solid rgb(174, 174, 174); /* Underline on hover */
+}
+
+.dark-mode .nav-link.active {
+    border-bottom: 2px solid rgb(174, 174, 174); /* Black underline for the active link */
+}
+
+.dark-mode #doctor-name {
+    color: white;
+}
+
+.dark-mode .profile-section {
+    background-color: #e0e0e038;
+    border: 1px solid #878787;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .bio-section {
+    background-color: #e0e0e038;
+    border: 1px solid #878787;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .contact-info{
+    background-color: #ffffffb8;
+    border: 1px solid #878787;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    color: black;
+    border-bottom: 8px solid #000000;
+}
+
+.dark-mode .working-hours{
+    background-color: #ffffffb8;
+    border: 1px solid #878787;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    color: black;
+    border-bottom: 8px solid #000000;
+}
+

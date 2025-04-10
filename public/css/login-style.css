@@ -1,0 +1,113 @@
+body {
+    font-family: 'Mulish', sans-serif;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #EEF7F8;
+}
+
+.image-container {
+    flex: 1; /* Take up remaining space */
+    height: 70vh; /* Match height of the body */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.login-container {
+    background: white;
+    padding: 2em;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;
+    margin-left: -90px; /* Space between the image and the login container */
+    margin-right: 10em;
+}
+
+.login-form h1 {
+    margin-bottom: 1em;
+    color: #000000;
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    margin: 0.5em 0 0.2em;
+    color: #004d40;
+}
+
+.login-form input {
+    width: 92.5%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-form button {
+    width: 100%;
+    padding: 0.8em;
+    border: none;
+    background: #0DAABC;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.login-form button:hover {
+    background: #004d40;
+}
+
+.login-form .forgot-password {
+    display: block;
+    margin-top: 1em;
+    color: #00796b;
+    text-decoration: none;
+}
+
+.login-form .forgot-password:hover {
+    text-decoration: none;
+}
+
+.social-login button {
+    width: 100%;
+    padding: 0.8em;
+    border: none;
+    background: white;
+    color: #00796b;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: background 0.3s;
+}
+
+.social-login button:hover {
+    background: #e0f2f1;
+}
+
+a {
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1000; /* Ensure it's above other content */
+}

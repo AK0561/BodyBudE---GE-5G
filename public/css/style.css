@@ -1,0 +1,726 @@
+/* General Styles */
+body {
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background */
+}
+
+
+header {
+    background-color: #b3e5fc; /* Light blue header background */
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 115px;
+    height: 75px;
+}
+
+.navbar {
+    background-color: transparent; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between links */
+    padding: 10px 0;
+    margin-right: 80px;
+}
+
+.nav-link {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    color: black;
+    text-decoration: none; /* Remove default underline */
+    padding-bottom: 5px; /* Space for underline */
+    border-bottom: 3px solid transparent; /* Invisible border initially */
+    transition: all 0.3s ease; /* Smooth transition for effects */
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid black; /* Underline on hover */
+}
+
+.nav-link.active {
+    border-bottom: 2px solid black; /* Black underline for the active link */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 850px;
+}
+
+nav li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+}
+
+main {
+    padding: 15px 50px;;
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping into rows */
+    justify-content: space-between; /* Space between rows */
+    gap: 20px; /* Add spacing between rows */
+}
+
+/* Parameters Container */
+.parameters {
+    flex: 1 1 calc(33.33% - 20px); /* Three boxes per row */
+    margin-bottom: 20px;
+}
+
+/* Individual Parameter Box Styling */
+.parameter {
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+    background-color: #ffffff; /* White background for contrast */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effects */
+}
+
+/* Hover Effects for Parameter Boxes */
+.parameter:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Parameter Title Styling (e.g., Blood Oxygen) */
+.parameter h2 {
+    margin-top: 0;
+    margin-bottom: 15px; /* Add spacing below the title */
+    font-size: 20px; /* Larger font size for titles */
+    font-weight: bold; /* Bold titles for emphasis */
+    color: #333333; /* Dark gray text color */
+}
+
+/* Chart Styling (Optional) */
+canvas {
+    width: 100%; /* Full width inside container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Distinct Background Colors for Each Parameter Box */
+#oxygen {
+    background-color: #e3f2fd; /* Light blue background for Blood Oxygen */
+}
+
+#Heart-Rate {
+    background-color: #fdecea; /* Light red background for Heart Rate */
+}
+
+#temperature {
+    margin-top: 20px;
+    background-color: #fff4e5; /* Light orange background for Body Temperature */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .parameters {
+        flex-basis: calc(50% - 20px); /* Two boxes per row on medium screens */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .parameters {
+        flex-basis: calc(100% - 40px); /* Full-width boxes on small screens (one per row) */
+        margin-bottom: 15px;
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-right: 1000px;
+    margin-left: 40px;
+    background-color: transparent; /* Ensure transparent background */
+}
+
+.details-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: transparent; /* Ensure transparent background */
+}
+
+.details-row p {
+    margin: 0;
+}
+
+.details-row p:first-child {
+    margin-right: 100px;
+}
+
+/* Status Boxes Container */
+.status-boxes {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center-align the cards horizontally */
+    gap: 30px; /* Add spacing between the cards */
+    margin: 50px auto; /* Center the container vertically */
+}
+
+/* Individual Status Box Styling */
+.status-box {
+    width: 220px; /* Fixed width for uniformity */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    text-align: center;
+    background-color: #ffffff; /* White background for cards */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+}
+
+/* Hover Effects for Status Boxes */
+.status-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Icon Styling Inside Status Boxes */
+.icon-container {
+    width: fit-content;
+    margin: auto;
+}
+
+/* Title Styling Inside Status Boxes (e.g., Heart Rate) */
+.status-box h2 {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    font-size: 18px; /* Set a readable font size for titles */
+    font-weight: bold; /* Make the title bold for emphasis */
+    color: #333333; /* Dark gray color for better contrast */
+}
+
+/* Value Styling Inside Status Boxes (e.g., bpm) */
+.status-box .value {
+    font-size: 24px; /* Larger font size for values (e.g., bpm) */
+    font-weight: bold;
+    color: #555555; /* Medium gray text color */
+}
+
+/* Status Label Styling (e.g., Normal) */
+.status-box .status-label {
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 20px; /* Rounded edges for label */
+    background-color: #fce4ec; /* Light pink background for labels */
+    color: #d81b60; /* Dark pink text color for labels */
+}
+
+/* Wave Effect Styling (Optional) */
+.status-box .wave {
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + -20);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .status-boxes {
+        flex-wrap: wrap; /* Wrap boxes into rows on smaller screens if needed */
+        gap: 20px; /* Reduce spacing between boxes on smaller screens */
+        justify-content: center; /* Center-align boxes horizontally on smaller screens */
+        margin-bottom: 20px; /* Add spacing below the container */
+        align-items: center;
+    }
+
+    .status-box {
+        flex-basis: calc(50% - 20px); /* Two cards per row on smaller screens */
+        margin-bottom: 20px; /* Add spacing between rows of boxes */
+        padding: 15px; /* Adjust padding for smaller screens */
+        font-size: 1.2rem; /* Slightly smaller font size for compact layout */
+    }
+}
+
+@media (max-width: 480px) {
+    .status-boxes {
+        flex-direction: column; /* Stack boxes vertically on very small screens */
+        gap: 15px; /* Reduce spacing between cards further */
+        align-items:center
+}
+}
+
+
+.theme-toggle-container {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#theme-toggle {
+    display: none;
+}
+
+.theme-toggle-label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-toggle-label svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: fill 0.3s;
+    color: #000;
+    margin-left: -185px;
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #fff;
+    }
+
+    header {
+        background-color: #1e1e1e;
+    }
+
+    nav a {
+        color: #fff;
+    }
+
+    .details-container, .status-boxes, .content-container, footer {
+        background-color: #1e1e1e;
+    }
+
+    .parameter, .status-box {
+        background-color: #2e2e2e;
+        border: 1px solid #555;
+    }
+
+    footer {
+        background-color: #1e1e1e;
+    }
+
+    .status-box h2, .status-box p {
+        color: #fff;
+    }
+}
+
+/* Custom Dark Mode Class */
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+.dark-mode nav a {
+    color: #fff;
+}
+
+.dark-mode .details-container, .dark-mode .status-boxes, .dark-mode .content-container, .dark-mode footer {
+    background-color: transparent;
+}
+
+.dark-mode .parameter, .dark-mode .status-box {
+    background-color: #2e2e2e;
+    border: 1px solid #555;
+}
+
+.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .status-box h2, .dark-mode .status-box p {
+    color: #fff;
+}
+
+.dark-mode .theme-toggle-label svg {
+    fill: #fff;
+}
+
+#logout-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px; /* Adjust as needed */
+    background-color: #FF4D4D;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px; /* Curved edges */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#logout-btn:hover {
+    background-color: #FF3333;
+}
+/* Chat System Styles */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0073ff;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.chat-button:hover {
+    background-color: #0073ff;
+    transform: scale(1.05);
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 450px; /* Expanded width */
+    height: 600px; /* Expanded height */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #1565c0; /* Blue header */
+    color: white;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.chat-controls button {
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.chat-body {
+    display: flex;
+    height: calc(100% - 60px);
+}
+
+/* Updated Online Doctors Section */
+.online-doctors {
+    width: 180px; /* Increased width for better visibility */
+    background-color: #e3f2fd; /* Light blue background */
+    padding: 10px;
+    overflow-y: auto;
+    border-right: 1px solid #90caf9; /* Blue border */
+}
+
+.online-doctors h4 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #1565c0; /* Dark blue text */
+}
+
+#doctors-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.doctor {
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Increased spacing between names */
+    font-size: 14px; /* Larger font size for better readability */
+    cursor: pointer;
+    background-color: #bbdefb; /* Light blue background for doctors */
+}
+
+.doctor:hover {
+    background-color: #90caf9; /* Slightly darker blue on hover */
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+.doctor.online .status-indicator {
+    background-color: #4caf50; /* Green for online status */
+}
+
+.doctor.offline .status-indicator {
+    background-color: #ccc; /* Gray for offline status */
+}
+
+.doctor div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.chat-messages-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 18px;
+}
+
+.message.received {
+    background-color: #e3f2fd;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+.message.sent {
+    background-color: #1565c0;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+}
+
+.message-sender {
+    font-size: 10px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.message-time {
+    font-size: 10px;
+    text-align: right;
+    margin-top: 2px;
+    opacity: 0.7;
+}
+
+.attachment {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.attachment svg {
+    margin-right: 5px;
+}
+
+.attachment a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.chat-input-area {
+    padding: 10px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #fff;
+}
+
+#message-form {
+    display: flex;
+    align-items: center;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+.attachment-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.file-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #555;
+}
+
+.file-label:hover {
+    background-color: #f0f0f0;
+}
+
+#file-name {
+    font-size: 11px;
+    color: #555;
+    margin-left: 5px;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#send-button {
+    background-color: #0073ff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background-color: #009957;
+}
+
+/* Dark Mode Support */
+.dark-mode .chat-container {
+    background-color: #2e2e2e;
+    border: 1px solid #444;
+}
+
+.dark-mode .chat-header {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .online-doctors {
+    background-color: #333;
+    border-right: 1px solid #444;
+}
+
+.dark-mode .online-doctors h4,
+.dark-mode .doctor {
+    color: #eee;
+}
+
+.dark-mode .doctor:hover {
+    background-color: #444;
+}
+
+.dark-mode .chat-messages {
+    background-color: #222;
+}
+
+.dark-mode .message.received {
+    background-color: #444;
+    color: #eee;
+}
+
+.dark-mode .chat-input-area {
+    background-color: #2e2e2e;
+    border-top: 1px solid #444;
+}
+
+.dark-mode #message-input {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #eee;
+}
+
+.dark-mode .file-label {
+    color: #eee;
+}
+
+.dark-mode .file-label:hover {
+    background-color: #444;
+}
+
+/* Animation for smooth appear */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.chat-container.active {
+    display: flex;
+    animation: slideIn 0.3s forwards;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .chat-container {
+        width: 300px;
+        height: 450px;
+    }
+    
+    .online-doctors {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-container {
+        width: calc(100% - 40px);
+        right: 20px;
+        left: 20px;
+    }
+}

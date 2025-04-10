@@ -1,0 +1,146 @@
+/* Main Content */
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 10px auto;
+    gap: 20px;
+}
+
+/* Left Section: Profile & Contact Info */
+.profile-section {
+    width: 30%;
+    background-color: rgba(155, 238, 252, 0.048);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Picture */
+.profile-card {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 600px;
+    height: 600px;
+    background-color: transparent;
+    margin-left: -100px;
+    margin-top: 20px;
+}
+
+/* Contact Info & Working Hours */
+.contact-info, .working-hours {
+    background-color: #549bebc6;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.contact-info h2, .working-hours h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+.bio-section {
+    width: 65%; /* Adjust width */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styling */
+.bio-section h2 {
+    font-size: 22px;
+    color: #1565c0; /* Blue heading color */
+    margin-bottom: 10px;
+}
+
+/* Expertise and Awards Container */
+.expertise-awards-container {
+    display: flex; /* Align content horizontally */
+    justify-content: space-between; /* Push content to edges */
+    align-items: flex-start; /* Align items at the top */
+    gap: 30px; /* Space between columns */
+}
+
+/* Areas of Expertise Section */
+.expertise {
+    width: 45%; /* Width for expertise section */
+}
+
+.expertise ul {
+    list-style-type: square; /* Square bullets for list */
+    padding-left: 20px; /* Indent list items */
+}
+
+/* Awards Section */
+.awards {
+    width: 45%; /* Width for awards section */
+}
+
+.awards ul {
+    list-style-type: square; /* Square bullets for list consistency */
+    padding-left: 20px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+/* Doctor's Name */
+.doctor-name {
+    font-size: 32px; /* Increased font size */
+    color: black; /* Black text color */
+    font-weight: bold; /* Makes the text bold for emphasis */
+    margin-bottom: 10px;
+    text-align: left; /* Aligns the text to the left */
+    padding-left: 150px; /* Adjusts the name to align with the box's padding */
+}
+/* Container for Contact Me and Working Hours */
+.contact-hours-container {
+    display: flex; /* Align boxes side by side */
+    justify-content: space-between; /* Add space between them */
+    gap: 20px; /* Space between boxes */
+    margin-top: 20px; /* Adds spacing above the container */
+}
+
+/* Contact Me Box */
+.contact-info {
+    width: 48%; /* Adjust width to fit side by side */
+    background-color: #549bebc6; /* Light blue background */
+    color: white; /* White text color */
+    padding: 15px; /* Padding inside the box */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-bottom: rgb(3, 43, 122) 8px solid; /* Dark blue bottom border */
+}
+
+/* Working Hours Box */
+.working-hours {
+    width: 48%; /* Adjust width to fit side by side */
+    background-color: #549bebc6; /* Light blue background */
+    color: white; /* White text color */
+    padding: 15px; /* Padding inside the box */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-bottom: rgb(3, 43, 122) 8px solid; /* Dark blue bottom border */
+}
+
+/* Heading Styling for Both Boxes */
+.contact-info h2, .working-hours h2 {
+    font-size: 18px; /* Heading size */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+/* Paragraph Styling for Both Boxes */
+.contact-info p, .working-hours p {
+    font-size: 16px; /* Paragraph text size */
+}
